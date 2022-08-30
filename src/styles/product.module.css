@@ -1,0 +1,39 @@
+.containerBox {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.imgBox>img {
+    height: 150px;
+}
+
+.description {
+    height: 90px;
+    overflow-y: scroll;
+    margin: 3px 0 5px 0;
+    color: rgb(120, 136, 151);
+}
+
+.description::-webkit-scrollbar {
+    display: none;
+}
+
+.cartButton>button {
+    width: 100%;
+    background-color: #fc5530;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+.titleBox{
+    min-height: 40px;
+}
+.titleBox>div{
+    font-weight: 500;
+    color: rgb(175, 112, 29);
+}
