@@ -1,4 +1,4 @@
-import { productActionTypes } from "./actionTypes";
+import {  productActionTypes } from "./actionTypes";
 
 const initialState = {
   isLoading: false,

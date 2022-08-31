@@ -1,5 +1,6 @@
-import { productFailure, productRequest, productSuccess } from "./actionTypes"
+import {   productFailure, productRequest, productSuccess } from "./actionTypes"
 import axios from 'axios'
+
 
 export const fetchProducts=()=>dispatch=>{
     dispatch(productRequest())
@@ -9,3 +10,4 @@ export const fetchProducts=()=>dispatch=>{
         dispatch(productFailure(err.message))
     })
 }
+

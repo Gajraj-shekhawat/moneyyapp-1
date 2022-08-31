@@ -11,11 +11,11 @@ export const fetchCartData=()=>(dispatch)=>{
     
 }
 
-export const addProductToCart=(el)=>dispatch=>{
-    dispatch(addToCartRequest())
-    axios.post(`https://json-dummy-server-gajraj.herokuapp.com/cart`,el).then(()=>{
+
+
+export const deleteFromCart=(id)=>dispatch=>{
+    dispatch(cartRequest())
+    axios.delete(`https://json-dummy-server-gajraj.herokuapp.com/cart/${id}`).then(()=>{
         dispatch(fetchCartData())
-    }).catch(err=>{
-        dispatch(addToCartFailure(err.message))
     })
 }

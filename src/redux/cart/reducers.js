@@ -1,4 +1,4 @@
-import { cartActionTypes } from "./actionTypes";
+import {  cartActionTypes } from "./actionTypes";
 
 
 const initialState = {
@@ -18,6 +18,8 @@ export const cartReducer = (state = initialState, { type, payload }) => {
       case cartActionTypes.FAILURE: {
         return {...state,isLoading:false,isError:true,errMessage:payload};
       }
+
+
     default: {
       return state;
     }

@@ -1,13 +1,12 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { addProductToCart } from "../redux/cart/actions";
 import styles from "../styles/product.module.css";
 
+import { ToastContainer } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 const Product = (el) => {
-const dispatch =useDispatch()
-  const handleCart=(el)=>{
-  dispatch(addProductToCart(el))
-  }
+
+
   return (
     <div className={styles.containerBox}>
       <div className={styles.imgBox}>
@@ -29,8 +28,11 @@ const dispatch =useDispatch()
         </p>
       </div>
       <div className={styles.cartButton}>
-        <button onClick={()=>{handleCart(el)}}>ADD TO CART</button>
+        <button onClick={()=>{el.onclick(el)}}>{el.label}</button>
       </div>
+      <div>
+      </div>
+        <ToastContainer/>
     </div>
   );
 };
