@@ -54,7 +54,7 @@ const Products = () => {
         <select
           onChange={(e) => {
             setSort(e.target.value);
-            setPage(1)
+            setPage(1);
           }}
           value={sort}
         >
@@ -66,7 +66,7 @@ const Products = () => {
         <select
           onChange={(e) => {
             setFilter(e.target.value);
-            setPage(1)
+            setPage(1);
           }}
           value={filter}
         >

@@ -1,8 +1,6 @@
-import styles from "../styles/loader.module.css"
+import styles from "../styles/loader.module.css";
 const Loader = () => {
-  return (
-    <div className={styles.box}></div>
-  )
-}
+  return <div className={styles.box}></div>;
+};
 
-export default Loader
+export default Loader;

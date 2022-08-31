@@ -11,7 +11,7 @@
   text-align: center;
 }
 
-.paginationsButton > button {
+.paginationsButton>button {
   margin: 15px;
   font-size: 1.5rem;
   padding: 5px 10px;
@@ -21,29 +21,33 @@
   color: white;
   cursor: pointer;
 }
-.paginationsButton > button:disabled {
+
+.paginationsButton>button:disabled {
   background-color: rgb(126, 179, 179);
   cursor: not-allowed;
 }
+
 .filterSortBox {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-}
-.filterSortBox>select,.filterSortBox>button{
-    outline: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    padding: 5px;
-    border: 1px solid gainsboro;
-    cursor: pointer;
-}
-.filterSortBox>button{
-    color: white;
-    background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
 }
 
+.filterSortBox>select,
+.filterSortBox>button {
+  outline: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid gainsboro;
+  cursor: pointer;
+}
+
+.filterSortBox>button {
+  color: white;
+  background-color: black;
+}
 
 /* medium */
 @media all and (min-width: 381px) and (max-width: 700px) {
@@ -53,6 +57,7 @@
     width: 100%;
   }
 }
+
 /* small */
 @media all and (min-width: 100px) and (max-width: 380px) {
   .productContainer {

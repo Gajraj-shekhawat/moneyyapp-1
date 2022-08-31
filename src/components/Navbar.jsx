@@ -16,12 +16,14 @@ const Navbar = () => {
       </NavLink>
       <NavLink
         style={({ isActive }) => {
-          return isActive ? { background: "#b10606",position:"relative" } : {position:"relative"};
+          return isActive
+            ? { background: "#b10606", position: "relative" }
+            : { position: "relative" };
         }}
         to={"/cart"}
       >
         Cart
-        <div className={styles.cartLength} >{cart.length}</div>
+        <div className={styles.cartLength}>{cart.length}</div>
       </NavLink>
     </nav>
   );

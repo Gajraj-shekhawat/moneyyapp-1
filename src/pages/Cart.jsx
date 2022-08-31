@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useSearchParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import Product from "../components/Product";
 import { deleteFromCart } from "../redux/cart/actions";
@@ -8,8 +7,6 @@ import styles from "../styles/cart.module.css";
 
 const Cart = () => {
   const { cart, isLoading } = useSelector((store) => store.cart);
-
-  const [searchParams, setSearchParams] = useSearchParams();
 
   const dispatch = useDispatch();
 

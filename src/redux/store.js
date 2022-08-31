@@ -10,7 +10,7 @@ import { productReducer } from "./product/reducers";
 
 const rootReducer = combineReducers({
   product: productReducer,
-  cart:cartReducer
+  cart: cartReducer,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
