@@ -10,12 +10,15 @@ import { addProductToCart } from "../utils/utils";
 
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+
   const [sort, setSort] = useState(searchParams.get("_sort") || "");
+
   const [filter, setFilter] = useState(searchParams.get("gender") || "");
 
   const [page, setPage] = useState(Number(searchParams.get("_page")) || 1);
 
   const dispatch = useDispatch();
+
   const { data, isLoading } = useSelector((store) => store.product);
 
   const resetAll = () => {
@@ -47,10 +50,11 @@ const Products = () => {
   }
   return (
     <div>
-      <div>
+      <div className={styles.filterSortBox}>
         <select
           onChange={(e) => {
             setSort(e.target.value);
+            setPage(1)
           }}
           value={sort}
         >
@@ -62,6 +66,7 @@ const Products = () => {
         <select
           onChange={(e) => {
             setFilter(e.target.value);
+            setPage(1)
           }}
           value={filter}
         >
