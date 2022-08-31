@@ -6,7 +6,12 @@ import { ToastContainer } from 'react-toastify';
 
 const Product = (el) => {
 
+const n= Math.round(el.rating.rate)
 
+const arr= new Array(n).fill(0)
+const newArr=new Array(5-n).fill(0)
+
+ 
   return (
     <div className={styles.containerBox}>
       <div className={styles.imgBox}>
@@ -19,13 +24,22 @@ const Product = (el) => {
       <div className={styles.description}>
         <p>{el.description}</p>
       </div>
-      <div>
+      <div className={styles.priceBox}>
         <b>₹{el.price}</b>
       </div>
-      <div>
-        <p>
-          {el.rating.rate} {el.rating.count}
-        </p>
+      <div className={styles.ratingBox} >
+        <div>
+        {arr.map((el,i)=>(
+          <span className={styles.emptyStar} key ={i}>&#9734;</span>
+        ))}
+        {newArr.map((el,i)=>(
+          <span  key ={i}>&#9734;</span>
+        ))}
+        <span className={styles.emptyStar}>
+         ({el.rating.count})
+        </span>
+        </div>
+        
       </div>
       <div className={styles.cartButton}>
         <button onClick={()=>{el.onclick(el)}}>{el.label}</button>

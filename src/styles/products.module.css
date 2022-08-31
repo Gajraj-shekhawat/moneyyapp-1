@@ -7,3 +7,40 @@
     margin: auto;
 
 }
+
+.paginationsButton{
+    text-align: center;
+}
+
+.paginationsButton>button{
+    margin: 15px;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
+.paginationsButton>button:disabled{
+    background-color: rgb(126, 179, 179);
+    cursor: not-allowed;
+}
+
+/* medium */
+@media all and (min-width: 381px) and (max-width: 700px) {
+    .productContainer{
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        width: 100%;
+      
+    
+    }
+}
+/* small */
+@media all and (min-width: 100px) and (max-width: 380px) {
+    .productContainer{
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;
+    }
+}

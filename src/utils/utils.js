@@ -10,5 +10,5 @@ export const addProductToCart=async (el)=>{
           error: 'Product already available in cart 🤯'
         }
     );
-    console.log(response)
+    return response
 }

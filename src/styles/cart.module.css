@@ -1,8 +1,39 @@
-.cartContainer{
+.cartContainer {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     padding: 10px;
     width: 80%;
     margin: auto;
+}
+
+.emptyCart {
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin: auto;
+    height: 400px;
+    font-size: 2rem;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* medium */
+@media all and (min-width: 381px) and (max-width: 700px) {
+    .cartContainer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+
+
+    }
+}
+
+/* small */
+@media all and (min-width: 100px) and (max-width: 380px) {
+    .cartContainer {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
 }
